@@ -29,7 +29,7 @@ sudo echo "dtoverlay=mhs35:rotate=270" >> ./boot/config.txt.bak
 sudo echo "hdmi_group=2" >> ./boot/config.txt.bak
 sudo echo "hdmi_mode=1" >> ./boot/config.txt.bak
 sudo echo "hdmi_mode=87" >> ./boot/config.txt.bak
-sudo echo "hdmi_cvt 1024 600 60 6 0 0 0" >> ./boot/config.txt.bak
+sudo echo "hdmi_cvt 800 480 60 6 0 0 0" >> ./boot/config.txt.bak
 sudo echo "hdmi_drive=2" >> ./boot/config.txt.bak
 sudo cp -rf ./boot/config.txt.bak /boot/config.txt
 
@@ -45,7 +45,7 @@ fi
 sudo cp ./usr/inittab /etc/
 #sudo cp ./boot/config-mhs35.txt /boot/config.txt
 sudo touch ./.have_installed
-echo "gpio:resistance:mhs35:270:1024:600" > ./.have_installed
+echo "gpio:resistance:mhs35:270:800:480" > ./.have_installed
 
 sudo apt-get update
 #FBCP install
